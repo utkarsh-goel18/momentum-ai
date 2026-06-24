@@ -1,408 +1,231 @@
-# Momentum AI
-### Your Personal AI Accountability & Productivity Agent
+# 🚀 Momentum AI
 
-> Stop missing deadlines. Start achieving goals.
+### AI-Powered Goal Tracking & Productivity Platform
 
-Momentum AI is an AI-powered productivity companion designed to help students, professionals, and entrepreneurs plan, prioritize, and complete their goals before deadlines are missed. Unlike traditional task managers that rely on passive reminders, Momentum AI actively assists users by generating personalized plans, monitoring progress, adapting schedules, and providing intelligent recommendations.
+Momentum AI is a full-stack productivity platform that helps users transform goals into actionable missions. Instead of simply storing tasks, Momentum AI uses AI-generated roadmaps, progress tracking, streak systems, analytics, and an AI coach to help users stay accountable and complete their goals before deadlines.
 
-Built for the Vibe2Ship Hackathon 2026 under the problem statement **"The Last-Minute Life Saver"**.
+Built during **Vibe2Ship Hackathon 2026** under the theme:
 
----
-
-## Problem Statement
-
-Students, professionals, and entrepreneurs frequently miss deadlines, assignments, meetings, bill payments, interviews, and important commitments. Existing productivity tools often rely on passive reminders that are easy to ignore and do little to help users actually complete their tasks.
-
-Momentum AI transforms productivity from task tracking into goal achievement by acting as an intelligent accountability partner.
+**"The Last-Minute Life Saver"**
 
 ---
 
-## Key Idea
+## ✨ Features
 
-Traditional Productivity Apps:
+### 🎯 Goal Management
 
-Task → Reminder → Ignore → Miss Deadline
+* Create personal goals with deadlines and priorities
+* Track active and completed missions
+* Visual progress indicators
+* Mission timeline tracking
 
-Momentum AI:
+### 🧠 AI Goal Analysis
 
-Goal → AI Planning → Task Breakdown → Daily Action Plan → Progress Tracking → Risk Analysis → Automatic Replanning
+Before creating a mission, Momentum AI analyzes:
 
-Instead of simply reminding users about tasks, Momentum AI helps them determine:
+* Success Probability
+* Difficulty Score
+* Estimated Duration
+* Suggested Roadmap
 
-- What to do next
-- What is most important
-- Whether they are on track
-- What happens if they fall behind
-- How to recover from missed work
+### 🗺️ AI Roadmap Generation
 
----
+Automatically generates actionable tasks based on the goal.
 
-# Features
-
-## 1. AI Goal Planning
-
-Users describe a goal in natural language.
-
-### Example
-
-Input:
-
-```text
-I want to prepare DSA for placements in 60 days.
-```
-
-AI generates:
-
-- Goal timeline
-- Estimated effort
-- Required milestones
-- Success probability
-
----
-
-## 2. Intelligent Task Decomposition
-
-Large goals are automatically broken into manageable tasks.
-
-### Example
+Example:
 
 Goal:
 
-```text
-Prepare for DSA Interviews
-```
+Prepare DSA for Placements
 
-Generated Tasks:
+Generated Roadmap:
 
-- Arrays
-- Strings
-- Linked Lists
-- Stacks & Queues
-- Trees
-- Graphs
-- Dynamic Programming
-- Mock Interviews
+* Arrays
+* Hash Maps
+* Linked Lists
+* Trees
+* Graphs
+* Dynamic Programming
+* Mock Interviews
 
----
+### 📊 Analytics Dashboard
 
-## 3. Smart Prioritization Engine
+Track:
 
-When multiple tasks compete for attention, Momentum AI determines what should be completed first based on:
+* Total Goals
+* Completion Rate
+* Productivity Metrics
+* Goal Progress
 
-- Deadline urgency
-- Goal importance
-- Estimated effort
-- Available time
+### 🔥 Streak System
 
-### Example
+Maintain consistency through daily activity streaks.
 
-Tasks:
+### 🤖 AI Coach
 
-- Assignment due tomorrow
-- Mid-sem exam next week
-- Internship application next month
+Users can interact with an AI-powered productivity coach and ask:
 
-Priority:
+* What should I work on today?
+* Which goal should I prioritize?
+* How should I start learning DSA?
+* Am I on track to finish my mission?
 
-1. Assignment
-2. Exam Preparation
-3. Internship Application
+### 🔔 Notification Center
 
----
+Receive updates when:
 
-## 4. Personalized Daily Action Plans
+* AI roadmaps are generated
+* Goals are created
+* Important mission events occur
 
-Every day, users receive a customized action plan based on:
+### 🔐 Authentication
 
-- Active goals
-- Deadlines
-- Available study/work hours
-- Previous progress
+Secure login using:
 
-### Example
-
-Today's Plan:
-
-- Complete Physics Assignment
-- Solve 10 Array Problems
-- Attend Gym Session
-
-Estimated Time: 4.5 Hours
+* Firebase Authentication
+* Google Sign-In
 
 ---
 
-## 5. AI Accountability Agent
+## 🏗️ Tech Stack
 
-At the end of each day, Momentum AI checks progress.
+### Frontend
 
-Users can mark:
+* React.js
+* React Router
+* Tailwind CSS
+* Vite
 
-- Completed
-- Partially Completed
-- Missed
+### Backend
 
-The AI then updates future schedules accordingly.
+* Flask
+* Python
 
----
+### Database
 
-## 6. Dynamic Replanning
+* PostgreSQL
 
-When users miss tasks, Momentum AI automatically adjusts schedules.
+### Authentication
 
-### Example
+* Firebase Authentication
 
-User misses:
+### AI
 
-```text
-2 Hours of DSA Practice
-```
-
-AI Response:
-
-```text
-Arrays moved to tomorrow.
-Trees shifted to Friday.
-Success probability reduced from 84% to 78%.
-```
+* Google Gemini API
 
 ---
 
-## 7. Goal Risk Prediction
+## 🏛️ System Architecture
 
-Momentum AI continuously evaluates whether users are likely to achieve their goals.
+React Frontend
 
-### Dashboard Metrics
+↓
 
-- Goal Completion Probability
-- Productivity Score
-- Consistency Index
-- Missed Task Trends
+Flask Backend API
 
----
+↓
 
-## 8. AI Productivity Coach
+PostgreSQL Database
 
-Users can chat with Momentum AI and ask questions such as:
+↓
 
-- Can I still finish this goal?
-- What should I prioritize today?
-- Am I falling behind?
-- How can I improve productivity?
+Gemini AI Services
 
-The AI provides personalized recommendations based on user progress.
+↓
+
+Firebase Authentication
 
 ---
 
-# Tech Stack
+## 📁 Project Structure
 
-## Frontend
+MomentumAI/
 
-- React.js
-- Tailwind CSS
-- React Router
+├── backend/
 
-## Backend
+│ ├── routes/
 
-- Flask
-- Python
+│ ├── services/
 
-## Database
+│ ├── config/
 
-- Firebase Firestore
+│ ├── app.py
 
-## Authentication
+│ └── requirements.txt
 
-- Firebase Authentication
-- Google Sign-In
+│
 
-## AI Layer
+├── frontend/
 
-- Google Gemini API
-- Google AI Studio
+│ ├── src/
 
-## Deployment
+│ ├── public/
 
-- Google AI Studio Deployment
-- Firebase Hosting (Optional)
+│ ├── package.json
 
----
+│ └── vite.config.js
 
-# Google Technologies Used
+│
 
-This project heavily utilizes Google technologies as required by the hackathon guidelines:
-
-- Gemini API
-- Google AI Studio
-- Firebase Authentication
-- Firebase Firestore
+└── README.md
 
 ---
 
-# System Architecture
+## ⚙️ Local Setup
 
-```text
-+----------------------+
-|      React App       |
-+----------+-----------+
-           |
-           v
-+----------------------+
-|      Flask API       |
-+----------+-----------+
-           |
-           +-------------------+
-           |                   |
-           v                   v
-+----------------+    +----------------+
-| Gemini API     |    | Firebase       |
-| AI Agents      |    | Firestore      |
-+----------------+    +----------------+
-```
+### Clone Repository
 
----
+git clone <repository-url>
 
-# AI Agent Architecture
+cd MomentumAI
 
-Momentum AI consists of multiple specialized agents.
+### Backend Setup
 
-## Planner Agent
+cd backend
 
-Responsible for:
+pip install -r requirements.txt
 
-- Goal analysis
-- Timeline creation
-- Task generation
+python app.py
+
+### Frontend Setup
+
+cd frontend
+
+npm install
+
+npm run dev
 
 ---
 
-## Prioritization Agent
+## 🌟 Future Enhancements
 
-Responsible for:
-
-- Ranking tasks
-- Time allocation
-- Urgency analysis
-
----
-
-## Recovery Agent
-
-Responsible for:
-
-- Schedule rebuilding
-- Missed task recovery
-- Deadline protection
+* Google Calendar Integration
+* Smart Deadline Risk Detection
+* AI Schedule Rebalancing
+* Mobile Application
+* Team Productivity Features
+* Voice-Based AI Coach
 
 ---
 
-## Coach Agent
+## 👨‍💻 Developer
 
-Responsible for:
+Utkarsh Goel
 
-- Daily guidance
-- Motivation
-- Productivity recommendations
+Electrical & Computer Engineering
 
----
-
-# Database Structure
-
-## Users
-
-```json
-{
-  "uid": "",
-  "name": "",
-  "email": "",
-  "createdAt": ""
-}
-```
-
-## Goals
-
-```json
-{
-  "title": "",
-  "description": "",
-  "deadline": "",
-  "status": "active"
-}
-```
-
-## Tasks
-
-```json
-{
-  "goalId": "",
-  "title": "",
-  "estimatedHours": 4,
-  "status": "pending"
-}
-```
-
-## Daily Logs
-
-```json
-{
-  "taskId": "",
-  "completed": true,
-  "date": ""
-}
-```
+Thapar Institute of Engineering & Technology
 
 ---
 
-# User Flow
+## 🏆 Hackathon
 
-1. Login using Google
-2. Create a Goal
-3. AI generates a plan
-4. User follows daily tasks
-5. AI monitors progress
-6. AI adjusts schedules when necessary
-7. User tracks performance through dashboard
-8. AI coach provides continuous guidance
-
----
-
-# Future Enhancements
-
-- Google Calendar Integration
-- Voice Assistant
-- Mobile Application
-- Wearable Device Integration
-- Smart Notifications
-- Team Collaboration
-- Habit Tracking
-- AI Study Companion
-
----
-
-# Impact
-
-Momentum AI helps users:
-
-- Reduce missed deadlines
-- Improve consistency
-- Make better decisions
-- Stay accountable
-- Achieve long-term goals
-
-By moving beyond passive reminders and enabling proactive AI assistance, Momentum AI transforms productivity into a personalized, adaptive, and intelligent experience.
-
----
-
-# Hackathon Information
-
-Hackathon: Vibe2Ship 2026
+Vibe2Ship 2026
 
 Problem Statement:
+
 The Last-Minute Life Saver
 
-Theme:
-AI-Powered Productivity & Goal Management
+Built using:
 
-Developed using:
-Google Gemini, Google AI Studio, Firebase, React, Flask
-
----
+React • Flask • PostgreSQL • Firebase • Gemini AI
