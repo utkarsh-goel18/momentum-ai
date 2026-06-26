@@ -5,6 +5,7 @@ import MainLayout from "../layouts/MainLayout";
 import Card from "../components/Card";
 
 import { useAuth } from "../context/AuthContext";
+export const API_URL = import.meta.env.VITE_API_URL;
 
 export default function CreateGoal() {
 
@@ -46,7 +47,7 @@ export default function CreateGoal() {
       setAnalysisLoading(true);
 
       const response = await fetch(
-        "${API_URL}goal-analysis",
+        `${API_URL}/goal-analysis`,
         {
           method: "POST",
           headers: {
@@ -126,7 +127,7 @@ export default function CreateGoal() {
       // Create Goal
 
       const goalResponse = await fetch(
-        "${API_URL}goals",
+        `${API_URL}/goals`,
         {
           method: "POST",
           headers: {
@@ -155,7 +156,7 @@ export default function CreateGoal() {
       // Generate Gemini Roadmap
 
       const roadmapResponse = await fetch(
-        "${API_URL}generate-roadmap",
+        `${API_URL}/generate-roadmap`,
         {
           method: "POST",
           headers: {
