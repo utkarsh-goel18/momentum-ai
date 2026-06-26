@@ -8,6 +8,7 @@ import TaskCard from "../components/TaskCard";
 import InsightCard from "../components/InsightCard";
 
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "../config";
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -24,7 +25,7 @@ export default function Dashboard() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/dashboard/${user.uid}`
+        `${API_URL}/dashboard/${user.uid}`
       );
 
       const data = await response.json();

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "../config";
 
 export default function Navbar() {
 
@@ -24,7 +25,7 @@ export default function Navbar() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/notifications/${user.uid}/unread-count`
+        `${API_URL}/notifications/${user.uid}/unread-count`
       );
 
       const data = await response.json();

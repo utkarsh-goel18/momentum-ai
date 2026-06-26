@@ -39,7 +39,7 @@ export default function AIChat() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:5000/ai-chat",
+        "${API_URL}ai-chat",
         {
           method: "POST",
           headers: {

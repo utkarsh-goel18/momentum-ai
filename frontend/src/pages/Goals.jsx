@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "../config";
 
 import MainLayout from "../layouts/MainLayout";
 import GoalCard from "../components/GoalCard";
@@ -31,7 +32,7 @@ export default function Goals() {
   const fetchGoals = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/user-goals/${user.uid}`
+        `${API_URL}/user-goals/${user.uid}`
       );
 
       const data = await response.json();

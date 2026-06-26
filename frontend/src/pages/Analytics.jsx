@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Card from "../components/Card";
 
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "../config";
 
 export default function Analytics() {
 
@@ -24,7 +25,7 @@ export default function Analytics() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/analytics/${user.uid}`
+        `${API_URL}/analytics/${user.uid}`
       );
 
       const data = await response.json();

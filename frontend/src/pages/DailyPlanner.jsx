@@ -4,6 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import Card from "../components/Card";
 
 import { useAuth } from "../context/AuthContext";
+import { API_URL } from "../config";
 
 export default function DailyPlanner() {
 
@@ -28,7 +29,7 @@ export default function DailyPlanner() {
       setLoading(true);
 
       const response = await fetch(
-        `http://127.0.0.1:5000/planner/user/${user.uid}`
+        `${API_URL}/planner/user/${user.uid}`
       );
 
       const data = await response.json();
@@ -36,7 +37,7 @@ export default function DailyPlanner() {
       setTasks(data.tasks || []);
 
       const streakResponse = await fetch(
-        `http://127.0.0.1:5000/streak/${user.uid}`
+        `${API_URL}/streak/${user.uid}`
       );
 
       const streakData = await streakResponse.json();
@@ -64,7 +65,7 @@ export default function DailyPlanner() {
     try {
 
       await fetch(
-        `http://127.0.0.1:5000/tasks/${taskId}/toggle`,
+        `${API_URL}/tasks/${taskId}/toggle`,
         {
           method: "PUT"
         }

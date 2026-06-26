@@ -46,7 +46,7 @@ export default function CreateGoal() {
       setAnalysisLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:5000/goal-analysis",
+        "${API_URL}goal-analysis",
         {
           method: "POST",
           headers: {
@@ -126,7 +126,7 @@ export default function CreateGoal() {
       // Create Goal
 
       const goalResponse = await fetch(
-        "http://127.0.0.1:5000/goals",
+        "${API_URL}goals",
         {
           method: "POST",
           headers: {
@@ -155,7 +155,7 @@ export default function CreateGoal() {
       // Generate Gemini Roadmap
 
       const roadmapResponse = await fetch(
-        "http://127.0.0.1:5000/generate-roadmap",
+        "${API_URL}generate-roadmap",
         {
           method: "POST",
           headers: {

@@ -4,6 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import Card from "../components/Card";
 import ProgressRing from "../components/ProgressRing";
+import { API_URL } from "../config";
 
 export default function GoalDetails() {
   const { id } = useParams();
@@ -40,7 +41,7 @@ export default function GoalDetails() {
   const fetchGoal = async () => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/goals/${id}`
+        `${API_URL}/goals/${id}`
       );
 
       const data = await response.json();
@@ -62,7 +63,7 @@ export default function GoalDetails() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/roadmap/${id}`
+        `${API_URL}/roadmap/${id}`
       );
 
       const data = await response.json();
@@ -83,7 +84,7 @@ export default function GoalDetails() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/tasks/${id}`
+        `${API_URL}/tasks/${id}`
       );
 
       const data = await response.json();
@@ -103,7 +104,7 @@ export default function GoalDetails() {
     try {
 
       await fetch(
-        `http://127.0.0.1:5000/tasks/${taskId}/toggle`,
+        `${API_URL}/tasks/${taskId}/toggle`,
         {
           method: "PUT",
         }
@@ -128,7 +129,7 @@ export default function GoalDetails() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:5000/goals/${id}`,
+        `${API_URL}/goals/${id}`,
         {
           method: "DELETE",
         }
@@ -152,7 +153,7 @@ export default function GoalDetails() {
     try {
 
       const response = await fetch(
-        `http://127.0.0.1:5000/goals/${id}`,
+        `${API_URL}/goals/${id}`,
         {
           method: "PUT",
           headers: {
