@@ -111,7 +111,7 @@ def get_analytics(user_id):
 
         WHERE g.user_id = %s
 
-        GROUP BY g.id
+        GROUP BY g.id, g.title
 
         ORDER BY g.id DESC
         """,
